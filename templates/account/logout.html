@@ -3,10 +3,14 @@
 {% block title %}Sair{% endblock %}
 
 {% block content %}
-    <h2>Sair</h2>
-    <p>Você tem certeza que deseja sair?</p>
+<div class="atendente-login">
+    <header class="header-atendente">
+        <img class="atendente-img" src="https://i.ibb.co/HBfdmsj/atendente.png"/>
+        <span><strong id="atendente-voice">Você tem certeza que deseja sair?<i class="fa-solid fa-volume-high" id="sound"></i></strong></span>
+    </header>
+</div>
     <form method="post" action="{% url 'account_logout' %}">
         {% csrf_token %}
-        <button class="btn btn-danger" type="submit">Sair</button>
+        <button class="btn btn-danger" id="botao-cadastrar-logar" type="submit">Sair</button>
     </form>
 {% endblock %}
