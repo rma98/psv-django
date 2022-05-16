@@ -43,7 +43,6 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'crispy_forms',
     'pages.apps.PagesConfig',
-    'anymail',
 ]
 
 MIDDLEWARE = [
@@ -137,7 +136,7 @@ AUTHENTICATION_BACKENDS = [
 SITE_ID = 1
 LOGIN_REDIRECT_URL = '/'
 ACCOUNT_SESSION_REMEMBER = True
-#EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 LOGIN_REDIRECT_URL = "/"
 ACCOUNT_SESSION_REMEMBER = True
 ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = False
@@ -148,10 +147,10 @@ ACCOUNT_UNIQUE_EMAIL = True
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
-EMAIL_BACKEND = 'anymail.backends.mailgun.EmailBackend'
-DEFAULT_FROM_EMAIL = 'no-reply@meusite.com'
-SERVER_EMAIL = DEFAULT_FROM_EMAIL
-ANYMAIL = {
-    'MAILGUN_API_KEY': 'b284272e8f70cf625e635b5f25f441e5-100b5c8d-caa74433',
-    'MAILGUN_SENDER_DOMAIN': 'sandboxc67f546553364dbd87a6623debda49ef.mailgun.org',
-}
+#EMAIL_BACKEND = 'anymail.backends.mailgun.EmailBackend'
+#DEFAULT_FROM_EMAIL = 'no-reply@meusite.com'
+#SERVER_EMAIL = DEFAULT_FROM_EMAIL
+#ANYMAIL = {
+#    'MAILGUN_API_KEY': 'b284272e8f70cf625e635b5f25f441e5-100b5c8d-caa74433',
+#    'MAILGUN_SENDER_DOMAIN': 'sandboxc67f546553364dbd87a6623debda49ef.mailgun.org',
+#}
