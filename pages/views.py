@@ -17,7 +17,7 @@ def cadastroMedico(request):
         form = formMedico()
 
     form = formPessoa()
-    return render(request, "cadastro.html", {'form': form})
+    return render(request, "cadastroMedico.html", {'form': form})
 
 def all(request):
     nome = ''
