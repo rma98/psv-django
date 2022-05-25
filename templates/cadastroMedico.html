@@ -1,11 +1,5 @@
-{% extends 'base.html' %}
-
-{% block title %}Loja Python{% endblock %}
-
-{% block content %}
 <form method="POST" class="ui form pad-top-30 pad-bottom-30">
     {% csrf_token %}
-
     <div class="contact-background-image">
         <div class="ui container margin-top-30">
 
@@ -22,7 +16,7 @@
                     <label>CRM</label>{{ form.crm }}
                 </div>
                 <div class="field">
-                    <label>Especialização</label>{{ form.especializacao }}
+                    <label>Especializacao</label>{{ form.especializacao }}
                 </div>
                 <div class="field">
                     <label>Turno</label>{{ form.turno }}
@@ -33,8 +27,10 @@
                 <div class="field">
                     <label>Senha</label>{{ form.senha }}
                 </div>
+ 
             </div>
         </div>
     </div>
 </form>
-{% endblock %}
+
+
