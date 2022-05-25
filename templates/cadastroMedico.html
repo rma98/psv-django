@@ -1,36 +1,44 @@
-<form method="POST" class="ui form pad-top-30 pad-bottom-30">
+
+{% load crispy_forms_tags %}
+
+
+<form>
     {% csrf_token %}
-    <div class="contact-background-image">
-        <div class="ui container margin-top-30">
-
-            <center><h2 class="huge header inverted">Novos Registros</h2></center>
-            <br>
-            <br>
-            <br>
-            <div class="two fields">
-                <div class="field">
-
-                    <label>Nome</label>{{ form.nome }}
-                </div>
-                <div class="field">
-                    <label>CRM</label>{{ form.crm }}
-                </div>
-                <div class="field">
-                    <label>Especializacao</label>{{ form.especializacao }}
-                </div>
-                <div class="field">
-                    <label>Turno</label>{{ form.turno }}
-                </div>
-                <div class="field">
-                    <label>Email</label>{{ form.email }}
-                </div>
-                <div class="field">
-                    <label>Senha</label>{{ form.senha }}
-                </div>
- 
-            </div>
-        </div>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Nome</label>{{ form.nome }}
+      <input type="nome" class="form-control" id="exampleInputEmail1">
     </div>
-</form>
+
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">CRM</label>{{ form.crm }}
+        <input type="crm" class="form-control" id="exampleInputEmail1">
+    </div>
+
+        
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Especialização</label>{{ form.especializacao }}
+        <input type="especializacao" class="form-control" id="exampleInputEmail1" >
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Turno</label>{{ form.turno }}
+        <input type="turno" class="form-control" id="exampleInputEmail1" >
+    </div>        
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email</label>{{ form.email }}
+        <input type="email" class="form-control" id="exampleInputEmail1">
+    </div>
+
+    
+      <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Senha</label>{{ form.senha }}
+      <input type="password" class="form-control" id="exampleInputPassword1">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Enviar</button>
+  </form>
+
+
+
 
 
