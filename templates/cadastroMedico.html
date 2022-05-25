@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}Loja Python{% endblock %}
+
+{% block content %}
+<form method="POST" class="ui form pad-top-30 pad-bottom-30">
+    {% csrf_token %}
+
+    <div class="contact-background-image">
+        <div class="ui container margin-top-30">
+
+            <center><h2 class="huge header inverted">Novos Registros</h2></center>
+            <br>
+            <br>
+            <br>
+            <div class="two fields">
+                <div class="field">
+
+                    <label>Nome</label>{{ form.nome }}
+                </div>
+                <div class="field">
+                    <label>CRM</label>{{ form.crm }}
+                </div>
+                <div class="field">
+                    <label>Especialização</label>{{ form.especializacao }}
+                </div>
+                <div class="field">
+                    <label>Turno</label>{{ form.turno }}
+                </div>
+                <div class="field">
+                    <label>Email</label>{{ form.email }}
+                </div>
+                <div class="field">
+                    <label>Senha</label>{{ form.senha }}
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+{% endblock %}
