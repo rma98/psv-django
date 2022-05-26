@@ -11,6 +11,9 @@ class CadastroUsuarioPageView(TemplateView):
 class CadastroUsuario1PageView(TemplateView):
     template_name = 'cadastroUsuario++.html' 
 
+class AgendarPageView(TemplateView):
+    template_name = 'agendar.html'
+
 def index(request):
     return render(request, "index.html", {})
 
