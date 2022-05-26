@@ -5,6 +5,7 @@
 {% block title %}CadastroMedico{% endblock %}
 
 {% block content %}
+
 <div class="next-page">
     <nav class="navbar navbar-expand-lg next-page">
       <div class="container-fluid">
@@ -33,38 +34,42 @@
       <span><strong id="atendente-voice">Cadastro neste site<i class="fa-solid fa-volume-high" id="sound"></i></strong></span>
     </header>
 </div>
-    <form method="POST">
-      {% csrf_token %}
+  <form method="post">
+    {% csrf_token %}
+
+      <input type="hidden" name="csrfmiddlewaretoken" value="uU9cDvhJRbqiXUkaCrfA1ooRyPJs78q12pYt9QVwWpuMhITkIw4r9lTsl1Y2qs9C">
+      
       <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Nome</label>{{ form.nome }}
-        <input type="nome" class="form-control">
+        <label for="id_nome" class="requireField">Nome <span class="asteriskField">*</span> </label>
+        <input type="nome" nome="nome" class="textinput textInput form-control" required id="id_nome">
       </div>
 
       <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">CRM</label>{{ form.crm }}
-        <input type="crm" class="form-control" >
+        <label for="id_crm" class="requireField">CRM <span class="asteriskField">*</span> </label>
+        <input type="crm" nome="crm" class="textinput textInput form-control" required id="id_crm" >
       </div>
 
       <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Especialização</label>{{ form.especializacao }}
-        <input type="especializacao" class="form-control">
+        <label for="id_especializacao" class="requireField">Especialização <span class="asteriskField">*</span> </label>
+        <input type="especializacao" nome="especializacao" class="textinput textInput form-control" required id="id_especializacao">
       </div>
 
       <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Turno</label>{{ form.turno }}
-        <input type="turno" class="form-control">
+        <label for="id_turno" class="requireField">Turno <span class="asteriskField">*</span> </label>
+        <input type="turno" nome="email" class="textinput textInput form-control" required id="id_turno">
     </div>        
     <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Email</label>{{ form.email }}
-        <input type="email" class="form-control">
+        <label for="id_email" class="requireField">Email <span class="asteriskField">*</span></span></label>
+        <input type="email" name="email" class="textinput textInput form-control" required id="id_email">
     </div>
 
     
       <div class="mb-3">
-      <label for="exampleInputPassword1" class="form-label">Senha</label>{{ form.senha }}
-      <input type="password" class="form-control">
+      <label for="id_password1" class="requireField">Senha <span class="asteriskField">*</span> </label>
+      <input type="password" nome="password1" placeholder="senha" autocapitalize="new-password" class="textinput textInput form-control">
     </div>
+    {{ form|crispy }}
 
-      <button class="btn btn-success" id="botao-cadastrar-logar-sair" type="submit">Cadastrar</button>
+    <button class="btn btn-success" id="botao-cadastrar-logar-sair" type="submit">Cadastrar</button>
     </form>
 {% endblock %}

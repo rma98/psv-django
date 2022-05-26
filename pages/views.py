@@ -9,7 +9,7 @@ def index(request):
     return render(request, "index.html", {})
 
 def cadastroMedico(request):
-    if request.method == "POST":
+    if request.method == "post":
         form = formMedico (request.POST,request.FILES)
         if form.is_valid():
             form.save()
@@ -22,7 +22,7 @@ def cadastroMedico(request):
 def all(request):
     nome = ''
     nomeComment = ''
-    if request.method == "POST":
+    if request.method == "post":
         form = formPessoa(request.POST, request.FILES)
         if form.is_valid():
             nome = form.cleaned_data['name']
