@@ -5,6 +5,12 @@ class HomePageView(TemplateView):
 class CadastroPageView(TemplateView):
     template_name = 'cadastroMedico.html'
 
+class CadastroUsuarioPageView(TemplateView):
+    template_name ='cadastroUsuario+.html'
+
+class CadastroUsuario1PageView(TemplateView):
+    template_name = 'cadastroUsuario++.html' 
+
 def index(request):
     return render(request, "index.html", {})
 
