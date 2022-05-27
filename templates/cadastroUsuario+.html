@@ -3,9 +3,19 @@
 {% block title %}Sair{% endblock %}
 
 {% block content %}
-<div class="atendente-login">
-    <center><a class="btn btn-danger" id="agendar" href="{% url 'pages:cadastro_usuario_' %}">Cadastrar / Agendar</a></center>
 
-</div>
+<body>
+    <br><br>
+    <div class="atendente">
+        <header class="header-atendente">
+            <img class="atendente-img" src="https://i.ibb.co/HBfdmsj/atendente.png" alt="atendente" border="0" />
+        <span><strong id="atendente-voice">&nbsp; BEM-VINDO <i class="fa-solid fa-volume-high" id="sound"></i></strong></span>
+        </header>
+    </div>
+    <div class="atendente-login">
+        <center><a class="btn btn-danger" id="agendar" href="{% url 'pages:cadastro_usuario_' %}">Cadastrar / Agendar</a></center>
+
+    </div>
+</body>
 
 {% endblock %}
